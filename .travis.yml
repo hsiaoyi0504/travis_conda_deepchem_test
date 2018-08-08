@@ -23,7 +23,8 @@ install:
 - pip install tensorflow==1.5.0
 - wget https://github.com/deepchem/deepchem/archive/2.0.0.tar.gz -O deepchem-2.0.0.tar.gz
 - tar zxf ./deepchem-2.0.0.tar.gz && rm ./deepchem-2.0.0.tar.gz
-- cd deepchem-2.0.0 && python setup.py install
+- cd deepchem-2.0.0 && python setup.py sdist && pip install dist/*
+- ls
 - conda install -c r r-base r-bitops
 
 script:
